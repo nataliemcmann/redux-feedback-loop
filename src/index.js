@@ -11,21 +11,21 @@ import logger from 'redux-logger';
 //make reducers
 const feeling = (state = 0, action) => {
     if (action.type === 'SET_FEELING') {
-        return state + action.payload;
+        return Number(action.payload);
     }
     return state;
 }
 
 const understanding = (state = 0, action) => {
     if (action.type === 'SET_UNDERSTANDING') {
-        return state + action.payload;
+        return Number(action.payload);
     }
     return state;
 }
 
 const support = (state = 0, action) => {
     if (action.type === 'SET_SUPPORT') {
-        return state + action.payload;
+        return Number(action.payload);
     }
     return state;
 }

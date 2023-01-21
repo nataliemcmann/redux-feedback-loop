@@ -13,6 +13,12 @@ function Feeling () {
     const handleFeelingSubmit = () => {
         event.preventDefault();
         console.log('in my feelings');
+        dispatch({
+            type: 'SET_FEELING',
+            payload: newFeeling
+        })
+        //history.push('/understanding');
+        setNewFeeling(0);
     }
 
     return (
