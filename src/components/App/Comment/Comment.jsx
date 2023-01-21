@@ -17,7 +17,7 @@ function Comment () {
             type: 'SET_COMMENT',
             payload: newComment
         });
-        // history.push('/review');
+        history.push('/review');
         setNewComment('');
     }
 
