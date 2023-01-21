@@ -16,15 +16,15 @@ function Feeling () {
         dispatch({
             type: 'SET_FEELING',
             payload: newFeeling
-        })
-        //history.push('/understanding');
+        });
+        history.push('/understanding');
         setNewFeeling(0);
     }
 
     return (
         <>
         <form onSubmit={handleFeelingSubmit}>
-            <label>How are you feeling today?</label>
+            <p>How are you feeling today?</p>
             <input
                 type="number"
                 min="1"
