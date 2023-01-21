@@ -9,7 +9,6 @@ function Review () {
     const support = useSelector(store => store.support);
     const comment = useSelector(store => store.comment);
 
-    const dispatch = useDispatch();
     const history = useHistory();
 
     //POST route
@@ -33,15 +32,6 @@ function Review () {
     const handleFeedbackSubmit = () => {
         event.preventDefault();
         console.log('ready to submit');
-        dispatch({
-            type: 'SET_FEEDBACK',
-            payload: {
-                feeling: feeling,
-                understanding: understanding,
-                support: support,
-                comments: comment
-            }
-        });
         history.push('/success');
         postFeedback();
     }

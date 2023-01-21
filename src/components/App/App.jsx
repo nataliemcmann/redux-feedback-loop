@@ -37,6 +37,9 @@ function App() {
         <Route exact path="/success">
           <Success />
         </Route>
+        <Route exact path="/admin">
+          <Admin />
+        </Route>
       </div>
     </Router>
   );
