@@ -1,21 +1,14 @@
 import React from 'react';
-import axios from 'axios';
 import './App.css';
-import { useDispatch } from 'react-redux';
-import { HashRouter as Router, Route, Link, HashRouter } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 
 //import components
 import Feeling from './Feeling/Feeling';
 import Understanding from './Understanding/Understanding';
 import Support from './Support/Support';
+import Comment from './Comment/Comment';
 
 function App() {
-  //declare dispatch object
-  const dispatch = useDispatch();
-
-  //declare useEffect();
-
-  //
   
   //add exact paths to components
   return (
@@ -32,6 +25,9 @@ function App() {
         </Route>
         <Route  exact path="/support">
           <Support />
+        </Route>
+        <Route exact path="/comment">
+          <Comment />
         </Route>
       </div>
     </Router>

@@ -30,7 +30,7 @@ const support = (state = 0, action) => {
     return state;
 }
 
-const comments = (state = [], action) => {
+const comment = (state = [], action) => {
     if (action.type === 'SET_COMMENT') {
         return [action.payload];
     }
@@ -46,7 +46,7 @@ const feedbackObj = (state = [], action) => {
 
 //make the store
 const reduxStore = createStore(combineReducers({
-    feeling, understanding, support, comments, feedbackObj
+    feeling, understanding, support, comment, feedbackObj
 }), applyMiddleware(logger));
 
 //wrap App in boilerplate
