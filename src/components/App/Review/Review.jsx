@@ -12,6 +12,24 @@ function Review () {
     const dispatch = useDispatch();
     const history = useHistory();
 
+    //POST route
+    const postFeedback = () => {
+        axios({
+            method: 'POST',
+            url: '/feedback',
+            data: {
+                feeling: feeling,
+                understanding: understanding,
+                support: support,
+                comments: comment
+            }
+        }).then((res) => {
+            console.log('POST request successful');
+        }).catch((err) => {
+            console.log('Error in POST request', err);
+        })
+    }
+
     const handleFeedbackSubmit = () => {
         event.preventDefault();
         console.log('ready to submit');
@@ -25,6 +43,7 @@ function Review () {
             }
         });
         history.push('/success');
+        postFeedback();
     }
 
     return (
