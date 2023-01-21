@@ -32,7 +32,7 @@ const support = (state = 0, action) => {
 
 const comment = (state = [], action) => {
     if (action.type === 'SET_COMMENT') {
-        return [action.payload];
+        return action.payload;
     }
     return state;
 }

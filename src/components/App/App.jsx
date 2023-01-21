@@ -18,7 +18,7 @@ function App() {
         <header className='App-header'>
           <h1 className='App-title'>Feedback!</h1>
         </header>
-        <Route exact path= "/feeling">
+        <Route exact path= "/">
           <Feeling />
         </Route>
         <Route exact path="/understanding">
