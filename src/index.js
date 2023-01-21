@@ -37,9 +37,16 @@ const comments = (state = [], action) => {
     return state;
 }
 
+const feedbackObj = (state = [], action) => {
+    if (action.type === 'SET_FEEDBACK') {
+        return [action.payload];
+    }
+    return state;
+}
+
 //make the store
 const reduxStore = createStore(combineReducers({
-
+    feeling, understanding, support, comments, feedbackObj
 }), applyMiddleware(logger));
 
 //wrap App in boilerplate
