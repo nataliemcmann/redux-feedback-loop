@@ -10,7 +10,7 @@ function Review () {
     const comment = useSelector(store => store.comment);
 
     const dispatch = useDispatch();
-    // const history = useHistory();
+    const history = useHistory();
 
     const handleFeedbackSubmit = () => {
         event.preventDefault();
@@ -24,7 +24,7 @@ function Review () {
                 comments: comment
             }
         });
-        //history.push('/success');
+        history.push('/success');
     }
 
     return (
