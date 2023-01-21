@@ -16,7 +16,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 ## General Plan
 
-I think base mode can be done with a main reducer, activeFeedback which will contain data that looks like an array containing a single object:
+I think base mode can be done with a main reducer, which will contain data that looks like an array containing a single object:
     ```js
     {
         feeling, 
@@ -53,3 +53,9 @@ Page 5: Review Feedback
     -submit should send user to submission success page
 
 Page 6: Submission Success
+
+## Stretch Goals
+
+I added an admin page first, because I was not using a GET route in base mode, just a post route. The admin page displays all feedback that was sent to the database. 
+
+Next steps are to style a little with material UI and allow users to edit their responses in the review page (add a pencil icon that will take them back to that page so they can change their response).
