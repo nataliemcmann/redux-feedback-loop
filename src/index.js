@@ -39,7 +39,7 @@ const comment = (state = [], action) => {
 
 const feedbackObj = (state = [], action) => {
     if (action.type === 'SET_FEEDBACK') {
-        return [action.payload];
+        return action.payload;
     }
     return state;
 }
@@ -53,7 +53,7 @@ const reduxStore = createStore(combineReducers({
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={reduxStore}>
-            <App />, 
+            <App /> 
         </Provider>
     </React.StrictMode>
 , document.getElementById('root'));

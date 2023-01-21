@@ -1,7 +1,33 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import FeedbackItem from './FeedbackItem';
+import axios from 'axios';
+import { useEffect } from 'react';
+
 
 function FeedbackTable () {
+    const dispatch = useDispatch();
+
+    //GET route
+    const getFeedback = () => {
+        axios.get('/feedback')
+        .then((res) => {
+            console.log('GET successful', 
+            res.data.rows);
+            dispatch({
+                type: 'SET_FEEDBACK',
+                payload: res.data.rows
+            });
+        })
+        .catch((err) => {
+            console.log('Error in GET request', err);
+        })
+    }
+
+    useEffect(()=>{
+        getFeedback();
+    }, []);
+
     const feedbackObj = useSelector(store => store.feedbackObj);
 
     return (
@@ -14,6 +40,11 @@ function FeedbackTable () {
                 <td>Comments</td>
             </tr>
         </thead>
+        <tbody>
+            {feedbackObj.map((feedback) => {
+            return <FeedbackItem key={feedback.id} feedback={feedback}/> 
+            })}
+        </tbody>
         </>
     )
 }

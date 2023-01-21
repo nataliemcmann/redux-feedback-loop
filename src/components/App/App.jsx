@@ -9,6 +9,7 @@ import Support from './Support/Support';
 import Comment from './Comment/Comment';
 import Review from './Review/Review';
 import Success from './Success/Success';
+import Admin from './Admin/Admin';
 
 function App() {
   
