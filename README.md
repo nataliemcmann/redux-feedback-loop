@@ -49,7 +49,7 @@ When they hit next, they will be taken to a review page where they can review th
 
 Finally, the owner of the training event can go to localhost/admin to view the survey results. 
 
-![admin](screenshots/)
+![admin](screenshots/admin_view.png)
 
 ## Technologies
 -Javascript -CSS -HTML
