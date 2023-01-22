@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import EditIcon from '@mui/icons-material/Edit';
 
 function Review () {
     const feeling = useSelector(store => store.feeling);
@@ -36,12 +37,40 @@ function Review () {
         postFeedback();
     }
 
+    const sendToFeelings = () => {
+        history.push('/');
+    }
+
+    const sendToU = () => {
+        history.push('/understanding')
+    }
+
+    const sendToSupport = () => {
+        history.push('/support');
+    }
+
+    const sendToComment = () => {
+        history.push('/comment');
+    }
+
     return (
         <>
-        <h3>Feelings: {feeling}</h3>
-        <h3>Understanding: {understanding}</h3>
-        <h3>Support: {support}</h3>
-        <h3>Comments: {comment}</h3>
+        <h3>
+            Feelings: {feeling}
+            <EditIcon onClick={sendToFeelings}/>
+        </h3>
+        <h3>
+            Understanding: {understanding}
+            <EditIcon onClick={sendToU} />
+        </h3>
+        <h3>
+            Support: {support}
+            <EditIcon onClick={sendToSupport} />
+        </h3>
+        <h3>
+            Comments: {comment}
+            <EditIcon onClick={sendToComment} />
+        </h3>
         <button onClick={handleFeedbackSubmit}>Submit</button>
         </>
     )
