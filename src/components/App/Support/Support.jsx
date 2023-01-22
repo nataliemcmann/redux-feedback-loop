@@ -13,7 +13,7 @@ import Input from '@mui/material/Input';
 import { ThemeProvider } from '@mui/material/styles';
 
 function Support ({ theme }) {
-    const [newSupport, setNewSupport] = useState(0);
+    const [newSupport, setNewSupport] = useState('');
 
     const dispatch = useDispatch();
 
@@ -27,7 +27,7 @@ function Support ({ theme }) {
             payload: newSupport
         });
         history.push('/comment');
-        setNewSupport(0);
+        setNewSupport('');
     }
 
     return (

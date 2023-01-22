@@ -49,7 +49,7 @@ function Feeling ({ theme }) {
                             required
                         />
                         <ThemeProvider theme={theme}>
-                            <CardActions >
+                            <CardActions>
                                 <button type="submit">Next</button>
                             </CardActions>
                         </ThemeProvider>
