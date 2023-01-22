@@ -51,6 +51,12 @@ Finally, the owner of the training event can go to localhost/admin to view the s
 
 *add screenshot -admin
 
+## Technologies
+-Javascript -CSS -HTML
+
+## Acknowledgement
+Thanks to Prime Digital Academy who equipped me with the skills to make this application a reality.
+
 ## General Plan
 
 If you're interested in how I built this app in a two-day sprint, read on!

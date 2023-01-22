@@ -11,7 +11,26 @@ import Review from './Review/Review';
 import Success from './Success/Success';
 import Admin from './Admin/Admin';
 
+//import MUI components
+import { createTheme } from '@mui/material/styles';
+
 function App() {
+  //create global theme to fix CardAction alignment
+  const theme = createTheme({
+    components: {
+      // Name of the component
+    MuiCardActions: {
+    styleOverrides: {
+        // Name of the slot
+        root: {
+        // Some CSS
+        display: 'flex',
+        justifyContent: 'center',
+        },
+    },
+    },
+},
+});
   
   //add exact paths to components
   return (
@@ -21,22 +40,22 @@ function App() {
           <h1 className='App-title'>Feedback!</h1>
         </header>
         <Route exact path= "/">
-          <Feeling />
+          <Feeling theme={theme}/>
         </Route>
         <Route exact path="/understanding">
-          <Understanding />
+          <Understanding theme={theme}/>
         </Route>
         <Route  exact path="/support">
-          <Support />
+          <Support theme={theme}/>
         </Route>
         <Route exact path="/comment">
-          <Comment />
+          <Comment theme={theme}/>
         </Route>
         <Route exact path="/review">
-          <Review />
+          <Review theme={theme}/>
         </Route>
         <Route exact path="/success">
-          <Success />
+          <Success theme={theme}/>
         </Route>
         <Route exact path="/admin">
           <Admin />
