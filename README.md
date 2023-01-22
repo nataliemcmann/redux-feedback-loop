@@ -23,7 +23,7 @@ Here's a survey intended to gather the mood, understanding and sense of support 
 
 ## Usage
 
-Upon opening the survey, the user will be asked to provide feedback on their general mood or feelings during the day. They can input 1 - 5, 1 being generally unhappy, 3 being ambivalent, and 5 being generally happy. Once they input a number, they will be able to click next, which will take them to the next question.
+Upon opening the survey, the user will be asked to provide feedback on their general mood or feelings during the day. They can input 1 - 5, 1 being generally unhappy and 5 being generally happy. Once they input a number, they will be able to click next, which will take them to the next question.
 
 ![feelings](screenshots/feeling.png)
 
@@ -35,15 +35,15 @@ The final required question asks how they would rate their feeling of support on
 
 ![support](screenshots/support.png)
 
-After support, the user is given the option to elaborate on their experience with a comment. 
+After support, the user is given the option to elaborate on their experience with a comment. Unlike the previous questions, users are not required to provide a response so they can click next while the input field is blank. 
 
 ![comments](screenshots/comments.png)
 
-When they hit next, they will be taken to a review page where they can review their feedback as a whole. If they want to go back to page to change their feedback, they can click the pencil icon. Once they return back to the review page, they can hit submit.
+Then, they will be taken to a review page where they can review their feedback as a whole. If they want to change their feedback, they can click the pencil icon, which will take them back to the appropriate page. Once they make it back to the review page, they can hit submit.
 
 ![review](screenshots/review.png)
 
- If the data is successfully posted to the database, the user will be taken to the success page. 
+ If the data is successfully posted to the database, the user will be taken to the success page.
 
 ![success](screenshots/success.png)
 
