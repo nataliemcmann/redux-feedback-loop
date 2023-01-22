@@ -11,6 +11,7 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Input from '@mui/material/Input';
 import { ThemeProvider } from '@mui/material/styles';
+import Button from '@mui/material/Button';
 
 function Feeling ({ theme }) {
     const [newFeeling, setNewFeeling] = useState('');
@@ -50,7 +51,12 @@ function Feeling ({ theme }) {
                         />
                         <ThemeProvider theme={theme}>
                             <CardActions>
-                                <button type="submit">Next</button>
+                                <Button 
+                                    type="submit"
+                                    variant="contained"
+                                >
+                                    Next
+                                </Button>
                             </CardActions>
                         </ThemeProvider>
                     </form>

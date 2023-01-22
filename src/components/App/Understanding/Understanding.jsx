@@ -50,7 +50,12 @@ function Understanding ({ theme }) {
                         />
                         <ThemeProvider theme={theme}>
                             <CardActions>
-                                <button type="submit">Next</button>
+                                <Button 
+                                    type="submit"
+                                    variant="contained"
+                                >
+                                    Next
+                                </Button>
                             </CardActions>
                         </ThemeProvider>
                     </form>
