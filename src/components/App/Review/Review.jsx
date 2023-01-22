@@ -35,6 +35,7 @@ function Review ({ theme }) {
             history.push('/success');
         }).catch((err) => {
             console.log('Error in POST request', err);
+            alert('Failed to submit feedback. Try again later.')
         })
     }
 
