@@ -47,7 +47,7 @@ When they hit next, they will be taken to a review page where they can review th
 
 ![success](screenshots/success.png)
 
-Finally, the owner of the training event can go to localhost/admin to view the survey results. 
+Finally, the owner of the training event can go to http://localhost:3000/?#/admin to view the survey results. 
 
 ![admin](screenshots/admin_view.png)
 

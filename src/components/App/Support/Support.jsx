@@ -1,7 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 //mui imports
 import Stack from '@mui/material/Stack';
@@ -14,12 +15,16 @@ import { ThemeProvider } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 
 
-function Support ({ theme }) {
+function Support ({ theme, progress, setProgress }) {
     const [newSupport, setNewSupport] = useState('');
 
     const dispatch = useDispatch();
 
     const history = useHistory();
+
+    useEffect(() => {
+        setProgress(75);
+    })
 
     const handleSupportSubmit = () => {
         event.preventDefault();
@@ -35,6 +40,7 @@ function Support ({ theme }) {
     return (
         <>
         <Stack spacing={2}>
+            <ProgressBar progress={progress}/>
             <Card>
                 <CardHeader
                     title="How well are you being supported?"

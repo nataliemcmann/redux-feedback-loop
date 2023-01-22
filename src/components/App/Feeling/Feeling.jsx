@@ -1,7 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 //mui imports
 import Stack from '@mui/material/Stack';
@@ -13,8 +14,12 @@ import Input from '@mui/material/Input';
 import { ThemeProvider } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 
-function Feeling ({ theme }) {
+function Feeling ({ theme, progress, setProgress }) {
     const [newFeeling, setNewFeeling] = useState('');
+
+    useEffect(() => {
+        setProgress(25);
+    })
 
     const dispatch = useDispatch();
 
@@ -34,6 +39,7 @@ function Feeling ({ theme }) {
     return (
         <>
         <Stack spacing={2}>
+            <ProgressBar progress={progress}/>
             <Card>
                 <CardHeader
                     title= "How are you feeling today?"

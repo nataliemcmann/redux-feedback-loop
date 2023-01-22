@@ -1,7 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 //mui imports
 import Stack from '@mui/material/Stack';
@@ -14,12 +15,16 @@ import { ThemeProvider } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 
 
-function Understanding ({ theme }) {
+function Understanding ({ theme, progress, setProgress }) {
     const [newUnderstanding, setNewUnderstanding] = useState('');
 
     const dispatch = useDispatch();
 
     const history = useHistory();
+
+    useEffect(() => {
+        setProgress(50);
+    })
 
     const handleUnderstandingSubmit = () => {
         event.preventDefault();
@@ -35,6 +40,7 @@ function Understanding ({ theme }) {
     return (
         <>
         <Stack spacing={2}>
+            <ProgressBar progress={progress}/>
             <Card>
                 <CardHeader 
                 title="How well did you understanding today's content?"

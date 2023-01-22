@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { HashRouter as Router, Route } from 'react-router-dom';
+import { useState } from 'react';
 
 //import components
 import Feeling from './Feeling/Feeling';
@@ -31,6 +32,8 @@ function App() {
     },
 },
 });
+
+  const [progress, setProgress] = useState(0);
   
   //add exact paths to components
   return (
@@ -40,16 +43,32 @@ function App() {
           <h1 className='App-title'>Feedback!</h1>
         </header>
         <Route exact path= "/">
-          <Feeling theme={theme}/>
+          <Feeling 
+            theme={theme} 
+            progress={progress} 
+            setProgress={setProgress}
+          />
         </Route>
         <Route exact path="/understanding">
-          <Understanding theme={theme}/>
+          <Understanding 
+            theme={theme} 
+            progress={progress} 
+            setProgress={setProgress}
+          />
         </Route>
         <Route  exact path="/support">
-          <Support theme={theme}/>
+          <Support 
+            theme={theme} 
+            progress={progress} 
+            setProgress={setProgress}
+          />
         </Route>
         <Route exact path="/comment">
-          <Comment theme={theme}/>
+          <Comment 
+            theme={theme}
+            progress={progress} 
+            setProgress={setProgress}
+          />
         </Route>
         <Route exact path="/review">
           <Review theme={theme}/>
