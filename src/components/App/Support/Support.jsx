@@ -46,6 +46,7 @@ function Support ({ theme }) {
                             type="number"
                             min="1"
                             max="5"
+                            sx={{input: {textAlign: "center"}}}
                             value={newSupport}
                             onChange={(evt) => setNewSupport(evt.target.value)}
                             required

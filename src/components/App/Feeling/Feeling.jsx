@@ -45,6 +45,7 @@ function Feeling ({ theme }) {
                             type="number"
                             min="1"
                             max="5"
+                            sx={{input: {textAlign: "center"}}}
                             value={newFeeling}
                             onChange={(evt) => setNewFeeling(evt.target.value)}
                             required

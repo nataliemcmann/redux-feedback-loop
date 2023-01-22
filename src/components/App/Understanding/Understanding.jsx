@@ -46,6 +46,7 @@ function Understanding ({ theme }) {
                             type="number"
                             min="1"
                             max="5"
+                            sx={{input: {textAlign: "center"}}}
                             value={newUnderstanding}
                             onChange={(evt) => setNewUnderstanding(evt.target.value)}
                             required

@@ -25,31 +25,31 @@ Here's a survey intended to gather the mood, understanding and sense of support 
 
 Upon opening the survey, the user will be asked to provide feedback on their general mood or feelings during the day. They can input 1 - 5, 1 being generally unhappy, 3 being ambivalent, and 5 being generally happy. Once they input a number, they will be able to click next, which will take them to the next question.
 
-*add screenshot -feelings
+![feelings](screenshots/feeling.png)
 
 The next question evaluates their level of understanding on a scale of 1-5. Again, 1 is poor and 5 is the best. Once they have selected a number, they can click next and continue to the next question.
 
-*add screenshot -understanding
+![understanding](screenshots/understanding.png)
 
 The final required question asks how they would rate their feeling of support on a scale of 1 - 5. 1 is unsupported and 5 is well-supported. 
 
-*add screenshot -support
+![support](screenshots/support.png)
 
 After support, the user is given the option to elaborate on their experience with a comment. 
 
-*add screenshot -comments
+![comments](screenshots/comment.png)
 
 When they hit next, they will be taken to a review page where they can review their feedback as a whole. If they want to go back to page to change their feedback, they can click the pencil icon. Once they return back to the review page, they can hit submit.
 
-*add screenshot -review
+![review](screenshots/review.png)
 
  If the data is successfully posted to the database, the user will be taken to the success page. 
 
-*add screenshot -success
+![success](screenshots/success.png)
 
 Finally, the owner of the training event can go to localhost/admin to view the survey results. 
 
-*add screenshot -admin
+![admin](screenshots/)
 
 ## Technologies
 -Javascript -CSS -HTML

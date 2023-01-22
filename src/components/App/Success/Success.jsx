@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function Success () {
     const history = useHistory();
@@ -11,7 +12,12 @@ function Success () {
     return (
         <>
         <h2>Feedback submitted successfully!</h2>
-        <button onClick={sendToFeelings}>Retake Survey</button>
+        <Button 
+            variant= "contained" 
+            onClick={sendToFeelings}
+        >
+            Retake Survey
+        </Button>
         </>
     )
 }
