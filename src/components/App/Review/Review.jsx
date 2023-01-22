@@ -4,7 +4,14 @@ import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import EditIcon from '@mui/icons-material/Edit';
 
-function Review () {
+//mui import
+import Stack from '@mui/material/Stack';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import Button from '@mui/material/Button';
+import { ThemeProvider } from '@mui/material/styles';
+
+function Review ({ theme }) {
     const feeling = useSelector(store => store.feeling);
     const understanding = useSelector(store => store.understanding);
     const support = useSelector(store => store.support);
@@ -31,6 +38,7 @@ function Review () {
         })
     }
 
+
     const handleFeedbackSubmit = () => {
         event.preventDefault();
         console.log('ready to submit');
@@ -55,25 +63,47 @@ function Review () {
 
     return (
         <>
-        <h3>
-            Feelings: {feeling}
-            <EditIcon onClick={sendToFeelings}/>
-        </h3>
-        <h3>
-            Understanding: {understanding}
-            <EditIcon onClick={sendToU} />
-        </h3>
-        <h3>
-            Support: {support}
-            <EditIcon onClick={sendToSupport} />
-        </h3>
-        <h3>
-            Comments: {comment}
-            <EditIcon onClick={sendToComment} />
-        </h3>
-        <button onClick={handleFeedbackSubmit}>Submit</button>
+        <Stack spacing={2}>
+            <Card>
+                <h3>Feelings: {feeling}</h3>
+                <ThemeProvider theme={theme}>
+                    <CardActions>
+                        <EditIcon onClick={sendToFeelings}/>
+                    </CardActions>
+                </ThemeProvider>
+            </Card>
+            <Card>
+                <h3>Understanding: {understanding}</h3>
+                <ThemeProvider theme={theme}>
+                    <CardActions>
+                        <EditIcon onClick={sendToU}/>
+                    </CardActions>
+                </ThemeProvider>
+            </Card>
+            <Card>
+                <h3>Support: {support}</h3>
+                <ThemeProvider theme={theme}>
+                    <CardActions>
+                        <EditIcon onClick={sendToSupport} />
+                    </CardActions>
+                </ThemeProvider>
+            </Card>
+            <Card>
+                <h3>Comments: {comment}</h3>
+                    <ThemeProvider theme={theme}>
+                        <CardActions>
+                            <EditIcon onClick={sendToComment} />
+                        </CardActions>
+                    </ThemeProvider>
+                </Card>
+            <Button 
+                variant="contained"
+                onClick={handleFeedbackSubmit}
+            >
+                Submit
+            </Button>
+        </Stack>
         </>
     )
-
 }
 export default Review;

@@ -11,6 +11,8 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Input from '@mui/material/Input';
 import { ThemeProvider } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+
 
 function Understanding ({ theme }) {
     const [newUnderstanding, setNewUnderstanding] = useState('');
