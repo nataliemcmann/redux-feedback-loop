@@ -6,7 +6,7 @@ const pool = require('../modules/pool.js');
 router.get('/', (req, res) => {
     let sqlQuery = `
     SELECT * from "feedback"
-    ORDER BY "date"
+    ORDER BY "date" DESC
     `;
     pool.query(sqlQuery)
     .then((dbRes) => {

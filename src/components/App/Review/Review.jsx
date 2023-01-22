@@ -25,6 +25,7 @@ function Review () {
             }
         }).then((res) => {
             console.log('POST request successful');
+            history.push('/success');
         }).catch((err) => {
             console.log('Error in POST request', err);
         })
@@ -33,7 +34,6 @@ function Review () {
     const handleFeedbackSubmit = () => {
         event.preventDefault();
         console.log('ready to submit');
-        history.push('/success');
         postFeedback();
     }
 
